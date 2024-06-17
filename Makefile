@@ -52,7 +52,7 @@ cose.o :
 
 
 $(MYPROGS) : $(CXXOBJS) $(PRGOBJS)
-	$(CXX) $(LDFLAGS) $^ $(LIBS) -o $@
+	$(CXX) $(LDFLAGS) $^ $(LIBS) -o $@.out
 
 clean :
 	rm -f $(GARBAGE)
