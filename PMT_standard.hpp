@@ -52,21 +52,44 @@ private:
     double c_mean[4] = {0.};
     double c_std[4] = {0.};
     
-    //PMT positions (in cm)
-    double x1 = 2.3;
-    double y1 = 30.7;
+    //--------- PMT positions (in cm) ---------//
 
-    double x2 = 30.7;
-    double y2 = 30.7;
+    //--- Parameters for LIME ---//
 
-    double x3 = 30.7;
-    double y3 = 2.3;
+    // double x1 = 2.3;
+    // double y1 = 30.7;
 
-    double x4 = 2.3;
-    double y4 = 2.3;
+    // double x2 = 30.7;
+    // double y2 = 30.7;
 
-    double zGEM = 19;
+    // double x3 = 30.7;
+    // double y3 = 2.3;
 
+    // double x4 = 2.3;
+    // double y4 = 2.3;
+
+    // double zGEM = 19;
+
+
+    //--- Parameters for CYGNO04 ---//
+
+    double x1 = 12.5;
+    double y1 = 80;
+
+    double x2 = 37.5;
+    double y2 = 80;
+
+    double x4 = 37.5;
+    double y3 = 53.3;
+
+    double x3 = 12.5;
+    double y4 = 53.3;
+
+    double zGEM = 59;
+
+
+    //-------------------------//
+    
     double data[4] = {0.};
 
     double xTrue = 0.;
