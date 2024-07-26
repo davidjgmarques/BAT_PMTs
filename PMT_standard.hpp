@@ -52,8 +52,10 @@ private:
     double c_mean[4] = {0.};
     double c_std[4] = {0.};
     
+    
     //--------- PMT positions (in cm) ---------//
 
+    
     //--- Parameters for LIME ---//
 
     // double x1 = 2.3;
@@ -68,23 +70,106 @@ private:
     // double x4 = 2.3;
     // double y4 = 2.3;
 
+    
+    //--- Parameters for CYGNO-04 ---//
+
+    // -------- PMTS 1-2-3-4
+    
+    // double x1 = 11.67;
+    // double y1 = 80.00;
+
+    // double x2 = 38.33;
+    // double y2 = 80.00;
+
+    // double x3 = 11.67;
+    // double y3 = 53.33;
+
+    // double x4 = 38.33;
+    // double y4 = 53.33;
+
+
+    // -------- PMTS 3-4-5-6
+    
+    ///// DX = -0.83333
+    
+    // double x1 = 12.50;
+    // double y1 = 53.33;
+
+    // double x2 = 37.50;
+    // double y2 = 53.33;
+
+    // double x3 = 12.50;
+    // double y3 = 26.67;
+
+    // double x4 = 37.50;
+    // double y4 = 26.67;
+
+
+    ///// DX = 0
+
+    double x1 = 11.67;
+    double y1 = 53.33;
+
+    double x2 = 38.33;
+    double y2 = 53.33;
+
+    double x3 = 11.67;
+    double y3 = 26.67;
+
+    double x4 = 38.33;
+    double y4 = 26.67;
+
+
+    ///// DX = 1.66666
+
+    // double x1 = 10.00;
+    // double y1 = 53.33;
+
+    // double x2 = 40.00;
+    // double y2 = 53.33;
+
+    // double x3 = 10.00;
+    // double y3 = 26.67;
+
+    // double x4 = 40.00;
+    // double y4 = 26.67;
+
+
+    ///// DX = 4.166666
+
+    // double x1 = 7.50;
+    // double y1 = 53.33;
+
+    // double x2 = 42.50;
+    // double y2 = 53.33;
+
+    // double x3 = 7.50;
+    // double y3 = 26.67;
+
+    // double x4 = 42.50;
+    // double y4 = 26.67;
+
+    // -------- PMTS 5-6-7-8
+
+    // double x1 = 11.67;
+    // double y1 = 26.67;
+
+    // double x2 = 38.33;
+    // double y2 = 26.67;
+
+    // double x3 = 11.67;
+    // double y3 = 0.0;
+
+    // double x4 = 38.33;
+    // double y4 = 0.0;
+
+
+    // ---- Distance from the GEM plane
+
+    // LIME
     // double zGEM = 19;
 
-
-    //--- Parameters for CYGNO04 ---//
-
-    double x1 = 12.5;
-    double y1 = 80;
-
-    double x2 = 37.5;
-    double y2 = 80;
-
-    double x4 = 37.5;
-    double y3 = 53.3;
-
-    double x3 = 12.5;
-    double y4 = 53.3;
-
+    // CYGNO-04
     double zGEM = 59;
 
 
