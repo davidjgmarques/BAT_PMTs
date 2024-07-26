@@ -38,12 +38,12 @@ PMTfit::PMTfit(const std::string& mode, int nth,
         AddParameter("L", 0, Lmax, "L", "[a.u.]");
 
         //--- Parameters for LIME ---//
-        // AddParameter("x", 0, 33, "x", "[cm]");
-        // AddParameter("y", 0, 33, "y", "[cm]");
+        AddParameter("x", 0, 33, "x", "[cm]");
+        AddParameter("y", 0, 33, "y", "[cm]");
         
         //--- Parameters for CYGNO04 ---//
-        AddParameter("x", 0, 50, "x", "[cm]");
-        AddParameter("y", 0, 80, "y", "[cm]");
+        // AddParameter("x", 0, 50, "x", "[cm]");
+        // AddParameter("y", 0, 80, "y", "[cm]");
         
         AddParameter("c1", 0., cmax, "c1", "[counts]");
         AddParameter("c2", 0., cmax, "c2", "[counts]");
@@ -52,18 +52,18 @@ PMTfit::PMTfit(const std::string& mode, int nth,
         
         //------- PMT CALIBRATION -------//         
         
+        //--- Parameters for LIME ---//
+        GetParameter("c1").Fix(1.0);
+        GetParameter("c2").Fix(0.965);
+        GetParameter("c3").Fix(0.860);
+        GetParameter("c4").Fix(0.827);
+
         //--- Parameters for CYGNO 04 ---//
         // We are using simulation, so the PMTs are intrinsically inter-calibrated
-        GetParameter("c1").Fix(1.0);
-        GetParameter("c2").Fix(1.0);
-        GetParameter("c3").Fix(1.0);
-        GetParameter("c4").Fix(1.0);
-
-        //--- Parameters for LIME ---//
         // GetParameter("c1").Fix(1.0);
-        // GetParameter("c2").Fix(0.965);
-        // GetParameter("c3").Fix(0.860);
-        // GetParameter("c4").Fix(0.827);
+        // GetParameter("c2").Fix(1.0);
+        // GetParameter("c3").Fix(1.0);
+        // GetParameter("c4").Fix(1.0);
 
     } else if (mode_.compare("PMTcalibration") == 0){
 
@@ -128,33 +128,33 @@ double PMTfit::LogAPrioriProbability(const std::vector<double>& pars) {
         LL += log(1.0/Lmax);
     }
 
-    //--- Parameters for LIME ---//
-    // for(unsigned int i=1; i<3; i++) {
-    //     if(pars[i]<0 || pars[i]>33.) {
-    //         LL += log(0.0);
-    //     } else {
-    //         LL += log(1.0/33.);
-    //     }
-    // }
-    
-    //--- Parameters for CYGNO 04 ---//
+    // --- Parameters for LIME ---//
     for(unsigned int i=1; i<3; i++) {
-
-        if (i == 1) {
-            if(pars[i]<0 || pars[i]>50.) {
-                LL += log(0.0);
-            } else {
-                LL += log(1.0/50.);
-            }
-        }
-        else if (i == 2) {
-            if(pars[i]<0 || pars[i]>80.) {
-                LL += log(0.0);
-            } else {
-                LL += log(1.0/80.);
-            }
+        if(pars[i]<0 || pars[i]>33.) {
+            LL += log(0.0);
+        } else {
+            LL += log(1.0/33.);
         }
     }
+    
+    //--- Parameters for CYGNO 04 ---//
+    // for(unsigned int i=1; i<3; i++) {
+
+    //     if (i == 1) {
+    //         if(pars[i]<0 || pars[i]>50.) {
+    //             LL += log(0.0);
+    //         } else {
+    //             LL += log(1.0/50.);
+    //         }
+    //     }
+    //     else if (i == 2) {
+    //         if(pars[i]<0 || pars[i]>80.) {
+    //             LL += log(0.0);
+    //         } else {
+    //             LL += log(1.0/80.);
+    //         }
+    //     }
+    // }
     
     for(unsigned int j=3; j<7; j++){
         if(pars[j]<0. || pars[j]>cmax) {

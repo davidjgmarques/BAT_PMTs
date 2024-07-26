@@ -58,17 +58,17 @@ private:
     
     //--- Parameters for LIME ---//
 
-    // double x1 = 2.3;
-    // double y1 = 30.7;
+    double x1 = 2.3;
+    double y1 = 30.7;
 
-    // double x2 = 30.7;
-    // double y2 = 30.7;
+    double x2 = 30.7;
+    double y2 = 30.7;
 
-    // double x3 = 30.7;
-    // double y3 = 2.3;
+    double x3 = 30.7;
+    double y3 = 2.3;
 
-    // double x4 = 2.3;
-    // double y4 = 2.3;
+    double x4 = 2.3;
+    double y4 = 2.3;
 
     
     //--- Parameters for CYGNO-04 ---//
@@ -107,17 +107,17 @@ private:
 
     ///// DX = 0
 
-    double x1 = 11.67;
-    double y1 = 53.33;
+    // double x1 = 11.67;
+    // double y1 = 53.33;
 
-    double x2 = 38.33;
-    double y2 = 53.33;
+    // double x2 = 38.33;
+    // double y2 = 53.33;
 
-    double x3 = 11.67;
-    double y3 = 26.67;
+    // double x3 = 11.67;
+    // double y3 = 26.67;
 
-    double x4 = 38.33;
-    double y4 = 26.67;
+    // double x4 = 38.33;
+    // double y4 = 26.67;
 
 
     ///// DX = 1.66666
@@ -167,10 +167,10 @@ private:
     // ---- Distance from the GEM plane
 
     // LIME
-    // double zGEM = 19;
+    double zGEM = 19;
 
     // CYGNO-04
-    double zGEM = 59;
+    // double zGEM = 59;
 
 
     //-------------------------//
